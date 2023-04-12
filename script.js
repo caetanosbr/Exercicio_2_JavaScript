@@ -18,22 +18,17 @@ let students = [
   { name: "Caroline" , nota1: 3, nota2: 2 },
 ]
 
-const calcMedia = (nota1, nota2) => {
-  return ((nota1 + nota2) / 2).toFixed(1)
-}
+function calcMedia(nota1,nota2) {
 
-for (let media of students) {
-  
-  if (calcMedia(media.nota1, media.nota2) >= 7 ) {
-
-    alert(`A média do(a) aluno(a) ${media.name} é: ${calcMedia(media.nota1, media.nota2)} 
-    Parabéns, ${media.name}! Você foi aprovado(a) no concurso!`)
-
-
-  } else {
-
-    alert(`A média do(a) aluno(a) ${media.name} é: ${calcMedia(media.nota1, media.nota2)}
-    Você não conseguiu a nota de classificação, tente novamente!`)
-
+  let media = ((nota1 + nota2) /2).toFixed(1)
+    return media
   }
-}
+
+  for (let student of students) {
+
+    media = calcMedia(student.nota1, student.nota2)
+    let aprovaOuNao = media > 7 ? ` Você foi aprovado(a) no concurso!` : `Você não conseguiu a nota de classificação, tente novamente!`
+    
+    alert(`A média do(a) ${student.name} é : ${media} ${aprovaOuNao}`)
+    }
+  
