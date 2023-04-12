@@ -14,6 +14,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <aside>
 💡 O que será abordado nesse desafio:
 
+
 - Estrutura de dados com objetos;
 - Estrutura de repetição;
 - Criação de funções;
